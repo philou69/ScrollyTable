@@ -1,0 +1,70 @@
+/* 
+* File contening of css for scrolling table 
+*
+**/
+/* Style for make sure the div.table fit the content parent and its scroll vertically automaticly */
+.scrolly-table {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    background: white;
+}
+
+
+
+
+/* --------------------------- Style for display like table ---------------------------------------------------*/
+/* Styling for make ligne effect for each div.tr */
+.scrolly-table .tr {
+    display: flex;
+    flex-direction: row;
+}
+
+/* --------------------------- Style for display like table ---------------------------------------------------*/
+
+/* Special class for make the content not breaking line and adding ... at word cut*/
+.scrolly-table.ellipsis .th,.scrolly-table.ellipsis .td {
+    padding : 0 5px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+}
+
+
+
+
+/* Style for fixing at top the head div with sticky */ 
+.scrolly-table .thead.sticky-head {
+    position: sticky;
+    top:0;
+    background-color: white; 
+}
+
+/* styiling for make sur the tr divs get the with of their childs and not of the div table */
+.scrolly-table.scrolly-table-h .tr {
+  width: intrinsic;           /* Safari/WebKit */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
+}
+
+
+
+
+/* Style for fixing at left the the first cell with sticky */ 
+.scrolly-table .sticky-left .td:first-of-type, .scrolly-table .sticky-left .th:first-of-type  {
+  position: sticky;
+  left: 0;
+  background-color: white;
+}
+
+/* Style for fixing at right the last cell with sticky */ 
+.scrolly-table .sticky-right .td:last-of-type, .scrolly-table .sticky-right .th:last-of-type   {
+  position: sticky;
+  right: 0;
+  background-color: white;
+}
+
+/* Styling for hovering */
+.scrolly-table.hovering .hover {
+    background-color: #ddd;
+}
