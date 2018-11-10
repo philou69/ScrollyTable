@@ -18,6 +18,7 @@
 .scrolly-table .tr {
     display: flex;
     flex-direction: row;
+    background: white;
 }
 
 /* --------------------------- Style for display like table ---------------------------------------------------*/
@@ -54,17 +55,17 @@
 .scrolly-table .sticky-left .td:first-of-type, .scrolly-table .sticky-left .th:first-of-type  {
   position: sticky;
   left: 0;
-  background-color: white;
+  background-color: inherit;
 }
 
 /* Style for fixing at right the last cell with sticky */ 
 .scrolly-table .sticky-right .td:last-of-type, .scrolly-table .sticky-right .th:last-of-type   {
   position: sticky;
   right: 0;
-  background-color: white;
+  background-color: inherit;
 }
 
 /* Styling for hovering */
 .scrolly-table.hovering .hover {
-    background-color: #ddd;
+    background-color: #ddd !important;
 }

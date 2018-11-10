@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="/scr/css/main.css"/>
+        <style>
+            body {
+                background: #eee;
+                color: #2a2077;
+                margin: auto 50px ;
+            }
+            h1 {
+                color: blue;
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+            }
+            #content {
+                height: calc(100vh - 400px);
+                width: calc(100vw - 400px);
+                margin: auto;
+            }
+            
+            /* Personnalistation of the style */
+            .scrolly-table .thead.sticky-head .tr {
+                background-color: #b1c5c0;
+            }
+            .scrolly-table.hovering .hover {
+                background-color: #bcc0e3 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>ScrollyTable</h1>
+        <p>
+            ScrollyTable make you generate a table scrollable vertically and horizontally. <br>
+            You can fixe the head and the side cells for always know where you are.
+        </p>
+        <h2>Exemple </h2>
+        <div id="content">
+
+            <!-- Base template of table for exemple -->
+            <div class="scrolly-table scrolly-table-h ellipsis hovering">
+                <div class="thead sticky-head sticky-left">
+                    <div class="tr">
+                        <div class="th">colone 1</div>
+                        <div class="th">colone 2</div>
+                        <div class="th">colone 3</div>
+                        <div class="th">colone 4</div>
+                        <div class="th">colone 5</div>
+                        <div class="th">colone 6</div>
+                        <div class="th">colone 7</div>
+                        <div class="th">colone 8</div>
+                        <div class="th">colone 9</div>
+                        <div class="th">colone 10</div>
+                    </div>
+                </div>
+                <div class="tbody sticky-left">
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">content 1</div>
+                        <div class="td">content 2</div>
+                        <div class="td">content 3</div>
+                        <div class="td">content 4</div>
+                        <div class="td">content 5</div>
+                        <div class="td">content 6</div>
+                        <div class="td">content 7</div>
+                        <div class="td">content 8</div>
+                        <div class="td">content 9</div>
+                        <div class="td">content 10</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  Call of JQuery for dependencies -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="/scr/js/main.js"></script>
+    </body>
+</html>
