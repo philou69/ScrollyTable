@@ -5,7 +5,7 @@
 var maxWidthTh = -1;
 
 if ($('.scrolly-table:not(.scrolly-table-h)').length != 0) {
-    // When the table is not horizontally scrollable, we make the width ofg cell egal of the width of table / numbers of cell
+    // When the table is not horizontally scrollable, we make the width of cell egal of the width of table / numbers of cell
     var tableLength = $('.scrolly-table').innerWidth();
     console.log(tableLength);
 
