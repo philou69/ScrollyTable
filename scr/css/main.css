@@ -73,3 +73,8 @@
 .scrolly-table.hovering .hover {
     border-bottom: 2px solid #c3e6cb ;
 }
+
+/* Centering the content of no result */
+.noResult {
+    text-align: center;
+}

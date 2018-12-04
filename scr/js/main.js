@@ -24,7 +24,7 @@ if ($('.scrolly-table:not(.scrolly-table-h)').length != 0) {
 } else {
     // When the table is horizontaly scrollable, ve make the width cell egal at the max witdh cell of the column
     // We loop on each columns for get the max value
-    var maxWidth, width,headWidth;
+    var maxWidth, width, headWidth;
     // We get the number of cell on thead for make a loop.
     var numberColones = $('.scrolly-table.scrolly-table-h .thead .th').length;
     for (var indexColone = 1; indexColone <= numberColones; indexColone++) {
@@ -64,4 +64,39 @@ $(document).on('mouseenter', '.scrolly-table.hovering .td:not(:first-of-type)', 
 /* For mouse leaving the table*/
 $(document).on('mouseleave', '.scrolly-table.hovering .td:not(:first-of-type)', function () {
     $('.scrolly-table tr, .scrolly-table .th, .scrolly-table .td').removeClass("hover")
+})
+
+
+
+/* ------------- Searching filter ----------- */
+// We define a contains function insensitive
+    jQuery.expr[':'].scContains = function (a, i, m) {
+        return jQuery(a).text().toUpperCase()
+                .indexOf(m[3].toUpperCase()) >= 0;
+    };
+// Basique div for no result 
+var $noResult = "<div class='noResult'> No result found </div>"
+
+// evnet for the search input
+$('input[type="text"].scrolly-filter').on('keyup', function () {
+    // We define the table target by the data-table attribut
+    var target = $(this).data('table');
+    // we remove an hypotetical no result div
+    $(target + " .tbody .noResult").remove();
+    // Now we hidde the div.tr in .tbody where the content no matching the search value
+    $(target + " .tbody .tr:not(:scContains(" + $(this).val() + "))").css('display', 'none');
+    $(target + " .tbody .tr:scContains(" + $(this).val() + ")").css('display', 'flex');
+    if ($(target + " .tbody .tr:scContains(" + $(this).val() + ")").length === 0) {
+        // If the search make no result, we display the div 
+        $(target + " .tbody").append($noResult);
+    }
+})
+
+$('button.scrolly-reset').on('click', function () {
+    // We define the table target 
+    var target = $(this).data('table');
+    // We remove the div no content, display all lines of the table and empty the search input
+    $(target + " .tbody .noResult").remove();
+    $(target + " .tbody .tr").css('display', 'flex');
+    $('input[type="text"].scrolly-filter[data-table="' + target + '"]').val('');
 })
