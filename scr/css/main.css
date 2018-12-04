@@ -22,10 +22,14 @@
 }
 
 /* --------------------------- Style for display like table ---------------------------------------------------*/
+/* for make spacing on cell*/
+.th, .td {
+    padding: 2px 5px;
+}
+
 
 /* Special class for make the content not breaking line and adding ... at word cut*/
 .scrolly-table.ellipsis .th,.scrolly-table.ellipsis .td {
-    padding : 0 5px;
    overflow: hidden;
    text-overflow: ellipsis;
    white-space: nowrap;
@@ -67,5 +71,5 @@
 
 /* Styling for hovering */
 .scrolly-table.hovering .hover {
-    background-color: #ddd ;
+    border-bottom: 2px solid #c3e6cb ;
 }
