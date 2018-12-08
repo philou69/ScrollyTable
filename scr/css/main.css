@@ -30,9 +30,9 @@
 
 /* Special class for make the content not breaking line and adding ... at word cut*/
 .scrolly-table.ellipsis .th,.scrolly-table.ellipsis .td {
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 
@@ -47,9 +47,9 @@
 
 /* styiling for make sur the tr divs get the with of their childs and not of the div table */
 .scrolly-table.scrolly-table-h .tr {
-  width: intrinsic;           /* Safari/WebKit */
-  width: -moz-max-content;    /* Firefox/Gecko */
-  width: -webkit-max-content; /* Chrome */
+    width: intrinsic;           /* Safari/WebKit */
+    width: -moz-max-content;    /* Firefox/Gecko */
+    width: -webkit-max-content; /* Chrome */
 }
 
 
@@ -57,16 +57,16 @@
 
 /* Style for fixing at left the the first cell with sticky */ 
 .scrolly-table .sticky-left .td:first-of-type:not(.hover), .scrolly-table .sticky-left .th:first-of-type  {
-  position: sticky;
-  left: 0;
-  background-color: inherit;
+    position: sticky;
+    left: 0;
+    background-color: inherit;
 }
 
 /* Style for fixing at right the last cell with sticky */ 
 .scrolly-table .sticky-right .td:last-of-type:not(.hover), .scrolly-table .sticky-right .th:last-of-type   {
-  position: sticky;
-  right: 0;
-  background-color: inherit;
+    position: sticky;
+    right: 0;
+    background-color: inherit;
 }
 
 /* Styling for hovering */
@@ -77,4 +77,28 @@
 /* Centering the content of no result */
 .noResult {
     text-align: center;
+}
+
+.scrolly-table.sortable .thead .th {
+    position: relative;
+    padding-right: 15px;
+}
+.scrolly-table.sortable .td {
+    padding-right: 15px;
+}
+.scrolly-table.sortable .thead .th:after {
+    content: "\2B83";
+    position: absolute;
+    /*left: 0;*/
+    right: 0;
+    /*height: 5px;*/
+    text-align: center;
+    /*bottom: 0;*/
+    /*font-size: 5px;*/
+}
+.scrolly-table.sortable .thead .th.up:after {
+    content: "\2B61";
+}
+.scrolly-table.sortable .thead .th.down:after {
+    content: "\2B63";
 }

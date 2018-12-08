@@ -70,10 +70,10 @@ $(document).on('mouseleave', '.scrolly-table.hovering .td:not(:first-of-type)', 
 
 /* ------------- Searching filter ----------- */
 // We define a contains function insensitive
-    jQuery.expr[':'].scContains = function (a, i, m) {
-        return jQuery(a).text().toUpperCase()
-                .indexOf(m[3].toUpperCase()) >= 0;
-    };
+jQuery.expr[':'].scContains = function (a, i, m) {
+    return jQuery(a).text().toUpperCase()
+            .indexOf(m[3].toUpperCase()) >= 0;
+};
 // Basique div for no result 
 var $noResult = "<div class='noResult'> No result found </div>"
 
@@ -100,3 +100,32 @@ $('button.scrolly-reset').on('click', function () {
     $(target + " .tbody .tr").css('display', 'flex');
     $('input[type="text"].scrolly-filter[data-table="' + target + '"]').val('');
 })
+
+
+/* ---------------- Sorting ------------ */
+$('.scrolly-table.sortable .thead .th').on('click', function () {
+    // We remove all sorter class for every cell header
+    $('.thead .th').not($(this)).removeClass("up").removeClass("down");
+    if ($(this).hasClass("up") === false && $(this).hasClass("down") === false) {
+        $(this).addClass("up")
+    } else {
+        $(this).toggleClass("up").toggleClass("down")
+    }
+    // we get the index of the click cell and the sort order
+    var index = $('.thead .th').index($(this));
+    var order = ($(this).hasClass('up') ? "asc" : "desc");
+        $(".tbody .tr").sort(function (first, second) {
+            // first and second are a line of table, we are going to get the index cell of their
+            // We storing the value of the cell on lower case to make the order more
+            var contentFirst = $($(first).find('.td').get(index)).text().toLowerCase();
+            var contentSecond = $($(second).find('.td').get(index)).text().toLowerCase();
+            if( order === "asc") {
+                return (contentFirst > contentSecond ? 1 :  -1);
+            } else {
+                return (contentFirst < contentSecond ? 1 : -1);
+            }
+        }).appendTo('.tbody');
+
+
+})
+
