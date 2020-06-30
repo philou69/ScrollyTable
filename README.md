@@ -121,3 +121,4 @@ If the color of the effect is not your type, just add a CSS style
     background-color: UseYourColor;
 }
 ```
+The class `.hover` is use to set the background color on the cells on the line and on the column.
