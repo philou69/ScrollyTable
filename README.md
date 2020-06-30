@@ -5,6 +5,11 @@ ScrollyTable help you to display huge table on screen.
 With it, you can simply fix the head and the first left cell, 
 so you can move in the table without losing yourself.
 
+## Dependency and compatibility
+
+ScrollyTable need jQuery3 to works. 
+It's not compatible with IE and has not been tested with Microsoft Edge.
+
 ## How it work
 
 For display the table, ScrollyTable use div element.
