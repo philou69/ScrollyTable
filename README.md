@@ -1,4 +1,4 @@
-#ScrollyTable
+# ScrollyTable
 CSS and JS to make easy scrolling table
 
 ScrollyTable help you to display huge table on screen. 
