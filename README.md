@@ -82,7 +82,7 @@ Simply adding the `.sticky-head` to the head div.
     </div>
 </div>
 ```
-###Fixing the side cell
+### Fixing the side cell
 If the first or last column is very important, you can fix them on the side.
 Use the `.sticky-left` or `.sticky-right` on both thead and tbody div.
 ```html
